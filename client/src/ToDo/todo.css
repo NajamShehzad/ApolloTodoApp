@@ -1,0 +1,17 @@
+.todo {
+  max-width: 500px;
+}
+
+.col {
+  margin: 20px 0px;
+}
+
+.done {
+  color: #1a8ffc;
+  cursor: pointer;
+}
+
+.delete {
+  color: red;
+  cursor: pointer;
+}

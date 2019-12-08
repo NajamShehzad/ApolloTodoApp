@@ -57,8 +57,8 @@ exports = module.exports = function (app, mongoose) {
             description: obj.description || '',
             state: obj.state || 'toDo',
           };
-          const updatedUser = await TasksModel.findOneAndUpdate({ _id: obj._id }, { $set: task }, { new: true });
-          if (!updatedUser) {
+          const updatedTask = await TasksModel.findOneAndUpdate({ _id: obj._id }, { $set: task }, { new: true });
+          if (!updatedTask) {
             return new UserInputError('No user found please check _Id');
           }
           return {
@@ -80,8 +80,8 @@ exports = module.exports = function (app, mongoose) {
             description: obj.description || '',
             state: obj.state || 'toDo',
           };
-          const updatedUser = await TasksModel.findOneAndDelete({ _id: obj._id });
-          if (!updatedUser) {
+          const updatedTask = await TasksModel.findOneAndDelete({ _id: obj._id });
+          if (!updatedTask) {
             return new UserInputError('No user found please check _Id');
           }
           return {
